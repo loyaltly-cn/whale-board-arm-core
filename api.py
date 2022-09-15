@@ -16,7 +16,7 @@ did = http.post(armApi+'deviceDPQM',data={"mac":mac,"token":token}).json()['data
 currentMid = -1
 
 def createMeeting():
-    res = http.post(armApi+'meetings',data={"url":ws,"did":did,"token":token}).json()
+    res = http.post(armApi+'meetings',data={"url":ws,"state":true,"did":did,"token":token}).json()
     global currentMid
     currentMid = res['data']
 
